@@ -64,6 +64,15 @@ app.get('/generic', (req, res) => {
   });
 });
 
+app.get('/salidas', (req, res) => {
+  res.render('salidas', {
+    nombre: 'Armando David Espinoza',
+    titulo: 'Curso de Node'
+  });
+});
+
+
+
 // Ruta para manejar páginas no encontradas (404)
 app.get('*', (req, res) => {
   res.sendFile(__dirname + '/public/404.html');
